@@ -1,0 +1,73 @@
+@media (max-width: 500px) {
+  .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #task-input, #task-label, #task-date, #add-task, #add-label {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .filter-buttons button {
+    flex: 1 1 45%;
+    margin-bottom: 5px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  li div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+}
+
+
+
+li.overdue { background-color: #ffcccc; }
+li.today { background-color: #cce5ff; }
+li.future { background-color: #ccffcc; }
+li.completed {
+  background-color: #e0e0e0;
+  text-decoration: line-through;
+  color: #666;
+}
+
+
+li div button {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+li.overdue div button { background-color: #ff6666; color: white; }
+li.today div button { background-color: #3399ff; color: white; }
+li.future div button { background-color: #33cc33; color: white; }
+li.completed div button { background-color: #999; color: white; }
+
+li div button:hover { opacity: 0.8; }
+li.overdue, li.today, li.future, li.completed {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}

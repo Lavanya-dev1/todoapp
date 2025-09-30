@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📌 To-Do App</h2>
+
+    
+    <div class="inputs">
+      <input id="task-input" type="text" placeholder="Enter task title" />
+      <select id="task-label">
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Study">Study</option>
+        <option value="Shopping">Shopping</option>
+      </select>
+      <button id="add-label">Add Label</button>
+      <input id="task-date" type="date" />
+      <button id="add-task">Add Task</button>
+    </div>
+    
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="Search tasks...">
+</div>
+<select id="sort-tasks">
+  <option value="none">Sort by</option>
+  <option value="date-asc">Date ↑</option>
+  <option value="date-desc">Date ↓</option>
+  <option value="label">Label</option>
+ 
+</select>
+
+
+    
+    <div class="filter-buttons">
+      <button onclick="renderTasks('all')">All</button>
+      <button onclick="renderTasks('overdue')">Overdue</button>
+      <button onclick="renderTasks('today')">Today</button>
+      <button onclick="renderTasks('future')">Future</button>
+      <button onclick="renderTasks('completed')">Completed</button>
+    </div>
+
+    
+    <section id="section-overdue" style="display:none">
+      <h3>Overdue Tasks</h3>
+      <ul id="overdue-tasks"></ul>
+    </section>
+
+    <section id="section-today" style="display:none">
+      <h3>Today's Tasks</h3>
+      <ul id="today-tasks"></ul>
+    </section>
+
+    <section id="section-future" style="display:none">
+      <h3>Future Tasks</h3>
+      <ul id="future-tasks"></ul>
+    </section>
+
+    <section id="section-completed" style="display:none">
+      <h3>Completed Tasks</h3>
+      <ul id="completed-tasks"></ul>
+    </section>
+
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
